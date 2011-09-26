@@ -14,7 +14,7 @@ Node = jast.Node = {}
 # Define "contexts", aka scopes, such as the script context and 
 # function closure context.
 
-jast.isContext = (o) -> o?[0].match(/-context$/)
+jast.isContext = (n) -> n?.type.match(/-context$/)
 
 jast.define "script-context",
 	stat: Node
@@ -25,7 +25,7 @@ jast.define "closure-context",
 
 # Define all possible JavaScript literals.
 
-jast.isLiteral = (o) -> o?[0].match(/-literal$/)
+jast.isLiteral = (n) -> n?.type.match(/-literal$/)
 
 jast.define "num-literal",
 	value: Number
@@ -47,9 +47,9 @@ jast.define "regex-literal",
 
 # Define all unary/binary operations.
 
-jast.isOp = (o) -> o?[0].match(/-op-expr$/)
-jast.isUnaryOp = (o) -> jast.isOp(o) and o.length == 3
-jast.isBinaryOp = (o) -> jast.isOp(o) and o.length == 4
+jast.isOp = (n) -> n?.type.match(/-op-expr$/)
+jast.isUnaryOp = (n) -> jast.isOp(n) and n.expr
+jast.isBinaryOp = (n) -> jast.isOp(n) and n.left and n.right
 
 for x in ['num', 'neg', 'not', 'bit-not', 'typeof', 'void']
 	jast.define "#{x}-op-expr",
@@ -64,7 +64,7 @@ for x in ['lt', 'lte', 'gt', 'gte', 'eq', 'eqs', 'neq', 'neqs',
 
 # Define all expression nodes.
 
-jast.isExpr = (o) -> o?[0].match(/-expr$/)
+jast.isExpr = (n) -> n?.type.match(/-expr$/)
 
 jast.define "this-expr"
 jast.define "call-expr"
@@ -129,7 +129,7 @@ jast.define "dyn-inc-expr",
 
 # Defines statements.
 
-jast.isStat = (o) -> o?[0].match(/-stat$/)
+jast.isStat = (n) -> n?.type.match(/-stat$/)
 
 jast.define "block-stat",
 	stats: Array(Node)
