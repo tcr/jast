@@ -8,8 +8,8 @@ jast is released under the modified BSD license.
 Each AST node is a JSON hash with the property "type" corresponding to the node type ("script-context", "sub-op-expr", etc) and the property "ln" corresponding to line number. Each node has properties about the node as described below:
 
 ### Contexts
-*    **script-context**: {_node_ stat}
-*    **closure-context**: {_String_ name, _Array<_String_>_ args, _node_ stat}
+*    **script-context**: {_Array<node>_ stats}
+*    **closure-context**: {_String_ name, _Array<_String_>_ args, _Array<node>_ stats}
 
 ### Literals
 *    **num-literal**: {_Number_ value}

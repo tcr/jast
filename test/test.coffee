@@ -1,4 +1,4 @@
-jast = require '../jast'
+jast = require '../'
 util = require 'util'
 
 ast = jast.parse 'function a() { alert("hello world"); alert(5 + 6 * 7 == 9); }; a()'

@@ -1,5 +1,13 @@
-{
-	"name": "jast",
-	"version": "0.0.1",
-	"main": "./lib/jast.js"
+{ "name": "jast"
+, "description": "A parser and tools for a JavaScript AST in JSON."
+, "version": "0.0.4"
+, "author"        : "Tim Cameron Ryan <tim@timryan.org>"
+, "contributors"  : []
+, "dependencies"  : []
+, "main": "./lib/jast.js"
+, "keywords": ["ast", "javascript", "parser", "tools", "walker"]
+, "repository":
+  { "type" : "git"
+  , "url" : "git://github.com/timcameronryan/jast.git"
+  } 
 }

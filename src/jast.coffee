@@ -12,6 +12,6 @@
 jast = exports
 
 # Internal dependencies.
-require './parser'
-require './nodes'
-require './walkers'
+require('./parser').populate jast
+require('./nodes').populate jast
+require('./walkers').populate jast
