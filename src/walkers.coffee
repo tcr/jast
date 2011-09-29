@@ -1,6 +1,13 @@
 # AST Walkers
 # -----------
 
+# Unique-set utility.
+set = (a) ->
+	o = {}; r = []
+	o[k] = true for k in a
+	r.push(k) for k, _ of o
+	return r
+
 exports.populate = (jast) ->
 
 	# Walk the AST, starting from the given node and including all child
@@ -69,7 +76,7 @@ exports.populate = (jast) ->
 		check = (n) ->
 			if n.type in ["script-context", "closure-context"] then return []
 			return jast.vars(n, check)
-		return [].concat(check(stat) for stat in ctx.stats)
+		return set([].concat(check(stat) for stat in ctx.stats))
 
 	# Returns true if this closure uses the implicit "arguments" variable.
 	jast.usesArguments = (closure) ->
@@ -85,14 +92,7 @@ exports.populate = (jast) ->
 					return [n.value]
 				else
 					return jast.walk(n, check)
-		return [].concat((check(stat) for stat in ctx.stats)...)
-
-	# Unique-set utility.
-	set = (a) ->
-		o = {}; r = []
-		o[k] = true for k in a
-		r.push(k) for k, _ of o
-		return r
+		return set([].concat((check(stat) for stat in ctx.stats)...))
 
 	# Finds all local references used in this node that are defined in
 	# parent scopes, or are not defined at all.
