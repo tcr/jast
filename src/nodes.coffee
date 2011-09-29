@@ -41,7 +41,7 @@ exports.populate = (jast) ->
 		value: Boolean
 	jast.define "func-literal",
 		closure: Node
-	jast.define "regex-literal",
+	jast.define "regexp-literal",
 		expr: String
 		flags: String
 

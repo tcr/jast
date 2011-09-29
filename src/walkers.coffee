@@ -64,24 +64,28 @@ exports.populate = (jast) ->
 			else
 				return jast.walk(n, f)
 
-	# Find all varaibles declared in this node's local scope.
-	jast.localVars = (n, f = jast.localVars) ->
-		if n.type in ["script-context", "closure-context"] then return []
-		return jast.vars(n, f)
+	# Find all varaibles declared in this context's local scope.
+	jast.localVars = (ctx) ->
+		check = (n) ->
+			if n.type in ["script-context", "closure-context"] then return []
+			return jast.vars(n, check)
+		return [].concat(check(stat) for stat in ctx.stats)
 
 	# Returns true if this closure uses the implicit "arguments" variable.
 	jast.usesArguments = (closure) ->
 		return "arguments" in [].concat((jast.localVars(x) for x in closure.stats)...)
 
-	# Finds all local references used in this node (variables or globals).
-	jast.localRefs = (n, f = jast.localRefs) ->
-		switch n.type
-			when "script-context", "closure-context"
-				return []
-			when "scope-ref-expr", "scope-assign-expr", "scope-delete-expr"
-				return [n.value]
-			else
-				return jast.walk(n, f)
+	# Finds all local references used in this context (variables or globals).
+	jast.localRefs = (ctx) ->
+		check = (n) ->
+			switch n.type
+				when "script-context", "closure-context"
+					return []
+				when "scope-ref-expr", "scope-assign-expr", "scope-delete-expr"
+					return [n.value]
+				else
+					return jast.walk(n, check)
+		return [].concat((check(stat) for stat in ctx.stats)...)
 
 	# Unique-set utility.
 	set = (a) ->
@@ -93,8 +97,8 @@ exports.populate = (jast) ->
 	# Finds all local references used in this node that are defined in
 	# parent scopes, or are not defined at all.
 	jast.localUndefinedRefs = (ctx) ->
-		refs = [].concat((jast.localRefs(x) for x in ctx.stats)...)
-		vars = [].concat((jast.localVars(x) for x in ctx.stats)...)
+		refs = jast.localRefs(ctx)
+		vars = jast.localVars(ctx)
 		return set(k for k in refs when k not in vars)
 
 	# Finds all undefined references in this node, including child scopes.
