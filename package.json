@@ -1,6 +1,6 @@
 { "name": "jast"
 , "description": "A parser and tools for a JavaScript AST in JSON."
-, "version": "0.1.1"
+, "version": "0.1.2"
 , "author"        : "Tim Cameron Ryan <tim@timryan.org>"
 , "contributors"  : []
 , "dependencies"  : []

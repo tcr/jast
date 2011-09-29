@@ -76,7 +76,7 @@ exports.populate = (jast) ->
 		check = (n) ->
 			if n.type in ["script-context", "closure-context"] then return []
 			return jast.vars(n, check)
-		return set([].concat(check(stat) for stat in ctx.stats))
+		return set([].concat((check(stat) for stat in ctx.stats)...))
 
 	# Returns true if this closure uses the implicit "arguments" variable.
 	jast.usesArguments = (closure) ->
