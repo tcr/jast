@@ -5,7 +5,7 @@ exports.populate = (jast) ->
 	preparser = require('./parser-base.js')
 
 	# Node shorthand. Each node has a type and line number property.
-	node = (type, ln, props) ->
+	node = (type, ln, props = {}) ->
 		ret = {type, ln}
 		(ret[k] = v) for k, v of props
 		return ret
@@ -34,7 +34,7 @@ exports.populate = (jast) ->
 				return node("array-literal", ln, exprs: (genAst(x) for x in elems))
 			when "object"
 				[_, ln, elems] = o
-				return node("obj-literal", ln, props: ([k, genAst(v)] for [k, v] in elems))
+				return node("obj-literal", ln, props: ({value: k, expr: genAst(v)} for [k, v] in elems))
 			when "regexp"
 				[_, ln, expr, flags] = o
 				return node("regexp-literal", ln, expr: expr, flags: flags)
@@ -197,8 +197,10 @@ exports.populate = (jast) ->
 				[_, ln, val, body] = o
 				return node "switch-stat", ln,
 					expr: genAst(val)
-					cases: {match: (if cse then genAst(cse) else null)
-						stat: node("block-stat", ln, stats: (genAst(x) for x in stats))} for [cse, stats] in body
+					cases: {
+						match: (if cse then genAst(cse) else null),
+						stat: node("block-stat", ln, stats: (genAst(x) for x in stats))
+						} for [cse, stats] in body
 
 			else
 				console.log("[ERROR] Can't generate AST for node \"#{o[0]}\"")
