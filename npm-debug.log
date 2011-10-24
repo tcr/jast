@@ -1,0 +1,302 @@
+info it worked if it ends with ok
+verbose cli [ 'node', '/usr/local/bin/npm', 'publish' ]
+info using npm@1.0.27
+info using node@v0.4.11
+verbose /usr/local/bin/node node symlink
+verbose config file /Users/tim/.npmrc
+verbose config file /usr/local/etc/npmrc
+verbose publish [ '.' ]
+silly testEngine { name: 'jast',
+silly testEngine   description: 'A parser and tools for a JavaScript AST in JSON.',
+silly testEngine   version: '0.2.0',
+silly testEngine   author: { name: 'Tim Cameron Ryan', email: 'tim@timryan.org' },
+silly testEngine   contributors: [],
+silly testEngine   dependencies: {},
+silly testEngine   main: './lib/jast.js',
+silly testEngine   keywords: [ 'ast', 'javascript', 'parser', 'tools', 'walker' ],
+silly testEngine   repository: 
+silly testEngine    { type: 'git',
+silly testEngine      url: 'git://github.com/timcameronryan/jast.git' },
+silly testEngine   _npmJsonOpts: 
+silly testEngine    { file: '/Volumes/Files/code/node/jast/package.json',
+silly testEngine      wscript: false,
+silly testEngine      contributors: false,
+silly testEngine      serverjs: false },
+silly testEngine   _id: 'jast@0.2.0',
+silly testEngine   devDependencies: {},
+silly testEngine   engines: { node: '*' },
+silly testEngine   _engineSupported: true,
+silly testEngine   _npmVersion: '1.0.27',
+silly testEngine   _nodeVersion: 'v0.4.11',
+silly testEngine   _defaultsLoaded: true,
+silly testEngine   scripts: {} }
+verbose caching /Volumes/Files/code/node/jast/package.json
+verbose loadDefaults jast@0.2.0
+info prepublish jast@0.2.0
+verbose cache add [ '.', null ]
+silly cache add: name, spec, args [ undefined, '.', [ '.', null ] ]
+verbose parsed url { pathname: '.', href: '.' }
+silly testEngine { name: 'jast',
+silly testEngine   description: 'A parser and tools for a JavaScript AST in JSON.',
+silly testEngine   version: '0.2.0',
+silly testEngine   author: { name: 'Tim Cameron Ryan', email: 'tim@timryan.org' },
+silly testEngine   contributors: [],
+silly testEngine   dependencies: {},
+silly testEngine   main: './lib/jast.js',
+silly testEngine   keywords: [ 'ast', 'javascript', 'parser', 'tools', 'walker' ],
+silly testEngine   repository: 
+silly testEngine    { type: 'git',
+silly testEngine      url: 'git://github.com/timcameronryan/jast.git' },
+silly testEngine   _npmJsonOpts: 
+silly testEngine    { file: 'package.json',
+silly testEngine      wscript: false,
+silly testEngine      contributors: false,
+silly testEngine      serverjs: false },
+silly testEngine   _id: 'jast@0.2.0',
+silly testEngine   devDependencies: {},
+silly testEngine   engines: { node: '*' },
+silly testEngine   _engineSupported: true,
+silly testEngine   _npmVersion: '1.0.27',
+silly testEngine   _nodeVersion: 'v0.4.11',
+silly testEngine   _defaultsLoaded: true,
+silly testEngine   path: '/Volumes/Files/code/node/jast' }
+verbose caching package.json
+verbose loadDefaults jast@0.2.0
+verbose pack /Volumes/Files/code/node/jast /var/folders/84/0tfdfbzd0yq2v8x5zy7nmrs80000gn/T/npm-1319487716979/1319487716979-0.3693839134648442/tmp.tgz
+verbose mkdir (expected) error ENOENT, No such file or directory '/var/folders/84/0tfdfbzd0yq2v8x5zy7nmrs80000gn/T/npm-1319487716979'
+verbose mkdir (expected) error ENOENT, No such file or directory '/var/folders/84/0tfdfbzd0yq2v8x5zy7nmrs80000gn/T/npm-1319487716979/1319487716979-0.3693839134648442'
+verbose mkdir done: /var/folders/84/0tfdfbzd0yq2v8x5zy7nmrs80000gn/T/npm-1319487716979/1319487716979-0.3693839134648442 755
+verbose mkdir'ed /var/folders/84/0tfdfbzd0yq2v8x5zy7nmrs80000gn/T/npm-1319487716979/1319487716979-0.3693839134648442
+verbose tar about to write tar and gzip it.
+silly tar args [ '-cvf',
+silly tar args   '-',
+silly tar args   'jast/README.md',
+silly tar args   'jast/package.json',
+silly tar args   'jast/lib/jast.js',
+silly tar args   'jast/lib/nodes.js',
+silly tar args   'jast/lib/parser-base.js',
+silly tar args   'jast/lib/parser.js',
+silly tar args   'jast/lib/walkers.js',
+silly tar args   'jast/src/jast.coffee',
+silly tar args   'jast/src/nodes.coffee',
+silly tar args   'jast/src/parser-base.js',
+silly tar args   'jast/src/parser.coffee',
+silly tar args   'jast/src/walkers.coffee',
+silly tar args   'jast/test/doc.coffee',
+silly tar args   'jast/test/test.coffee' ]
+verbose success tar -cvf - <file list elided>
+verbose success gzip "--stdout"
+verbose mkdir (expected) error ENOENT, No such file or directory '/var/folders/84/0tfdfbzd0yq2v8x5zy7nmrs80000gn/T/npm-1319487716979/1319487716979-0.3693839134648442/contents'
+verbose mkdir (expected) error ENOENT, No such file or directory '/var/folders/84/0tfdfbzd0yq2v8x5zy7nmrs80000gn/T/npm-1319487716979/1319487716979-0.3693839134648442/contents/___package.npm'
+verbose mkdir done: /var/folders/84/0tfdfbzd0yq2v8x5zy7nmrs80000gn/T/npm-1319487716979/1319487716979-0.3693839134648442/contents/___package.npm 755
+verbose unpack_ uid, gid [ undefined, undefined ]
+verbose unpackTarget /var/folders/84/0tfdfbzd0yq2v8x5zy7nmrs80000gn/T/npm-1319487716979/1319487716979-0.3693839134648442/contents/package
+silly gunzTarPerm modes [ '755', '644' ]
+verbose success gzip "--decompress" "--stdout" "/var/folders/84/0tfdfbzd0yq2v8x5zy7nmrs80000gn/T/npm-1319487716979/1319487716979-0.3693839134648442/tmp.tgz"
+verbose success tar "-mvxpf" "-" "-o" "-C" "/var/folders/84/0tfdfbzd0yq2v8x5zy7nmrs80000gn/T/npm-1319487716979/1319487716979-0.3693839134648442/contents/___package.npm"
+silly asyncMap in gTP /var/folders/84/0tfdfbzd0yq2v8x5zy7nmrs80000gn/T/npm-1319487716979/1319487716979-0.3693839134648442/contents/___package.npm/jast/
+silly asyncMap in gTP /var/folders/84/0tfdfbzd0yq2v8x5zy7nmrs80000gn/T/npm-1319487716979/1319487716979-0.3693839134648442/contents/___package.npm/jast/package.json
+silly asyncMap in gTP /var/folders/84/0tfdfbzd0yq2v8x5zy7nmrs80000gn/T/npm-1319487716979/1319487716979-0.3693839134648442/contents/___package.npm/jast/README.md
+silly asyncMap in gTP /var/folders/84/0tfdfbzd0yq2v8x5zy7nmrs80000gn/T/npm-1319487716979/1319487716979-0.3693839134648442/contents/___package.npm/jast/lib/
+silly asyncMap in gTP /var/folders/84/0tfdfbzd0yq2v8x5zy7nmrs80000gn/T/npm-1319487716979/1319487716979-0.3693839134648442/contents/___package.npm/jast/lib/jast.js
+silly asyncMap in gTP /var/folders/84/0tfdfbzd0yq2v8x5zy7nmrs80000gn/T/npm-1319487716979/1319487716979-0.3693839134648442/contents/___package.npm/jast/lib/nodes.js
+silly asyncMap in gTP /var/folders/84/0tfdfbzd0yq2v8x5zy7nmrs80000gn/T/npm-1319487716979/1319487716979-0.3693839134648442/contents/___package.npm/jast/lib/parser-base.js
+silly asyncMap in gTP /var/folders/84/0tfdfbzd0yq2v8x5zy7nmrs80000gn/T/npm-1319487716979/1319487716979-0.3693839134648442/contents/___package.npm/jast/lib/parser.js
+silly asyncMap in gTP /var/folders/84/0tfdfbzd0yq2v8x5zy7nmrs80000gn/T/npm-1319487716979/1319487716979-0.3693839134648442/contents/___package.npm/jast/lib/walkers.js
+silly asyncMap in gTP /var/folders/84/0tfdfbzd0yq2v8x5zy7nmrs80000gn/T/npm-1319487716979/1319487716979-0.3693839134648442/contents/___package.npm/jast/src/
+silly asyncMap in gTP /var/folders/84/0tfdfbzd0yq2v8x5zy7nmrs80000gn/T/npm-1319487716979/1319487716979-0.3693839134648442/contents/___package.npm/jast/src/jast.coffee
+silly asyncMap in gTP /var/folders/84/0tfdfbzd0yq2v8x5zy7nmrs80000gn/T/npm-1319487716979/1319487716979-0.3693839134648442/contents/___package.npm/jast/src/nodes.coffee
+silly asyncMap in gTP /var/folders/84/0tfdfbzd0yq2v8x5zy7nmrs80000gn/T/npm-1319487716979/1319487716979-0.3693839134648442/contents/___package.npm/jast/src/parser-base.js
+silly asyncMap in gTP /var/folders/84/0tfdfbzd0yq2v8x5zy7nmrs80000gn/T/npm-1319487716979/1319487716979-0.3693839134648442/contents/___package.npm/jast/src/parser.coffee
+silly asyncMap in gTP /var/folders/84/0tfdfbzd0yq2v8x5zy7nmrs80000gn/T/npm-1319487716979/1319487716979-0.3693839134648442/contents/___package.npm/jast/src/walkers.coffee
+silly asyncMap in gTP /var/folders/84/0tfdfbzd0yq2v8x5zy7nmrs80000gn/T/npm-1319487716979/1319487716979-0.3693839134648442/contents/___package.npm/jast/test/
+silly asyncMap in gTP /var/folders/84/0tfdfbzd0yq2v8x5zy7nmrs80000gn/T/npm-1319487716979/1319487716979-0.3693839134648442/contents/___package.npm/jast/test/doc.coffee
+silly asyncMap in gTP /var/folders/84/0tfdfbzd0yq2v8x5zy7nmrs80000gn/T/npm-1319487716979/1319487716979-0.3693839134648442/contents/___package.npm/jast/test/test.coffee
+verbose gunzed /var/folders/84/0tfdfbzd0yq2v8x5zy7nmrs80000gn/T/npm-1319487716979/1319487716979-0.3693839134648442/contents/___package.npm/jast
+verbose rm'ed /var/folders/84/0tfdfbzd0yq2v8x5zy7nmrs80000gn/T/npm-1319487716979/1319487716979-0.3693839134648442/contents/package
+verbose renamed [ '/var/folders/84/0tfdfbzd0yq2v8x5zy7nmrs80000gn/T/npm-1319487716979/1319487716979-0.3693839134648442/contents/___package.npm/jast',
+verbose renamed   '/var/folders/84/0tfdfbzd0yq2v8x5zy7nmrs80000gn/T/npm-1319487716979/1319487716979-0.3693839134648442/contents/package' ]
+silly testEngine { name: 'jast',
+silly testEngine   description: 'A parser and tools for a JavaScript AST in JSON.',
+silly testEngine   version: '0.2.0',
+silly testEngine   author: { name: 'Tim Cameron Ryan', email: 'tim@timryan.org' },
+silly testEngine   contributors: [],
+silly testEngine   dependencies: {},
+silly testEngine   main: './lib/jast.js',
+silly testEngine   keywords: [ 'ast', 'javascript', 'parser', 'tools', 'walker' ],
+silly testEngine   repository: 
+silly testEngine    { type: 'git',
+silly testEngine      url: 'git://github.com/timcameronryan/jast.git' },
+silly testEngine   _npmJsonOpts: 
+silly testEngine    { file: '/var/folders/84/0tfdfbzd0yq2v8x5zy7nmrs80000gn/T/npm-1319487716979/1319487716979-0.3693839134648442/contents/package/package.json',
+silly testEngine      wscript: false,
+silly testEngine      contributors: false,
+silly testEngine      serverjs: false },
+silly testEngine   _id: 'jast@0.2.0',
+silly testEngine   devDependencies: {},
+silly testEngine   engines: { node: '*' },
+silly testEngine   _engineSupported: true,
+silly testEngine   _npmVersion: '1.0.27',
+silly testEngine   _nodeVersion: 'v0.4.11',
+silly testEngine   _defaultsLoaded: true,
+silly testEngine   path: '/var/folders/84/0tfdfbzd0yq2v8x5zy7nmrs80000gn/T/npm-1319487716979/1319487716979-0.3693839134648442/contents/package' }
+verbose caching /var/folders/84/0tfdfbzd0yq2v8x5zy7nmrs80000gn/T/npm-1319487716979/1319487716979-0.3693839134648442/contents/package/package.json
+verbose loadDefaults jast@0.2.0
+verbose tarball contents [ 'package' ]
+verbose from cache /var/folders/84/0tfdfbzd0yq2v8x5zy7nmrs80000gn/T/npm-1319487716979/1319487716979-0.3693839134648442/contents/package/package.json
+verbose pack /var/folders/84/0tfdfbzd0yq2v8x5zy7nmrs80000gn/T/npm-1319487716979/1319487716979-0.3693839134648442/contents/package /Users/tim/.npm/jast/0.2.0/package.tgz
+verbose mkdir'ed /Users/tim/.npm/jast/0.2.0
+verbose tar about to write tar and gzip it.
+silly tar args [ '-cvf',
+silly tar args   '-',
+silly tar args   'package/package.json',
+silly tar args   'package/README.md',
+silly tar args   'package/lib/jast.js',
+silly tar args   'package/lib/nodes.js',
+silly tar args   'package/lib/parser-base.js',
+silly tar args   'package/lib/parser.js',
+silly tar args   'package/lib/walkers.js',
+silly tar args   'package/src/jast.coffee',
+silly tar args   'package/src/nodes.coffee',
+silly tar args   'package/src/parser-base.js',
+silly tar args   'package/src/parser.coffee',
+silly tar args   'package/src/walkers.coffee',
+silly tar args   'package/test/doc.coffee',
+silly tar args   'package/test/test.coffee' ]
+verbose success tar -cvf - <file list elided>
+verbose success gzip "--stdout"
+verbose mkdir (expected) error ENOENT, No such file or directory '/Users/tim/.npm/jast/0.2.0/___package.npm'
+verbose mkdir done: /Users/tim/.npm/jast/0.2.0/___package.npm 755
+verbose unpack_ uid, gid [ undefined, undefined ]
+verbose unpackTarget /Users/tim/.npm/jast/0.2.0/package
+silly gunzTarPerm modes [ '755', '644' ]
+verbose success gzip "--decompress" "--stdout" "/Users/tim/.npm/jast/0.2.0/package.tgz"
+verbose success tar "-mvxpf" "-" "-o" "-C" "/Users/tim/.npm/jast/0.2.0/___package.npm"
+silly asyncMap in gTP /Users/tim/.npm/jast/0.2.0/___package.npm/package/
+silly asyncMap in gTP /Users/tim/.npm/jast/0.2.0/___package.npm/package/package.json
+silly asyncMap in gTP /Users/tim/.npm/jast/0.2.0/___package.npm/package/README.md
+silly asyncMap in gTP /Users/tim/.npm/jast/0.2.0/___package.npm/package/lib/
+silly asyncMap in gTP /Users/tim/.npm/jast/0.2.0/___package.npm/package/lib/jast.js
+silly asyncMap in gTP /Users/tim/.npm/jast/0.2.0/___package.npm/package/lib/nodes.js
+silly asyncMap in gTP /Users/tim/.npm/jast/0.2.0/___package.npm/package/lib/parser-base.js
+silly asyncMap in gTP /Users/tim/.npm/jast/0.2.0/___package.npm/package/lib/parser.js
+silly asyncMap in gTP /Users/tim/.npm/jast/0.2.0/___package.npm/package/lib/walkers.js
+silly asyncMap in gTP /Users/tim/.npm/jast/0.2.0/___package.npm/package/src/
+silly asyncMap in gTP /Users/tim/.npm/jast/0.2.0/___package.npm/package/src/jast.coffee
+silly asyncMap in gTP /Users/tim/.npm/jast/0.2.0/___package.npm/package/src/nodes.coffee
+silly asyncMap in gTP /Users/tim/.npm/jast/0.2.0/___package.npm/package/src/parser-base.js
+silly asyncMap in gTP /Users/tim/.npm/jast/0.2.0/___package.npm/package/src/parser.coffee
+silly asyncMap in gTP /Users/tim/.npm/jast/0.2.0/___package.npm/package/src/walkers.coffee
+silly asyncMap in gTP /Users/tim/.npm/jast/0.2.0/___package.npm/package/test/
+silly asyncMap in gTP /Users/tim/.npm/jast/0.2.0/___package.npm/package/test/doc.coffee
+silly asyncMap in gTP /Users/tim/.npm/jast/0.2.0/___package.npm/package/test/test.coffee
+verbose gunzed /Users/tim/.npm/jast/0.2.0/___package.npm/package
+verbose rm'ed /Users/tim/.npm/jast/0.2.0/package
+verbose renamed [ '/Users/tim/.npm/jast/0.2.0/___package.npm/package',
+verbose renamed   '/Users/tim/.npm/jast/0.2.0/package' ]
+silly testEngine { name: 'jast',
+silly testEngine   description: 'A parser and tools for a JavaScript AST in JSON.',
+silly testEngine   version: '0.2.0',
+silly testEngine   author: { name: 'Tim Cameron Ryan', email: 'tim@timryan.org' },
+silly testEngine   contributors: [],
+silly testEngine   dependencies: {},
+silly testEngine   main: './lib/jast.js',
+silly testEngine   keywords: [ 'ast', 'javascript', 'parser', 'tools', 'walker' ],
+silly testEngine   repository: 
+silly testEngine    { type: 'git',
+silly testEngine      url: 'git://github.com/timcameronryan/jast.git' },
+silly testEngine   _npmJsonOpts: 
+silly testEngine    { file: '/Users/tim/.npm/jast/0.2.0/package/package.json',
+silly testEngine      wscript: false,
+silly testEngine      contributors: false,
+silly testEngine      serverjs: false },
+silly testEngine   _id: 'jast@0.2.0',
+silly testEngine   devDependencies: {},
+silly testEngine   engines: { node: '*' },
+silly testEngine   _engineSupported: true,
+silly testEngine   _npmVersion: '1.0.27',
+silly testEngine   _nodeVersion: 'v0.4.11',
+silly testEngine   _defaultsLoaded: true,
+silly testEngine   dist: 
+silly testEngine    { shasum: 'a742e190f56c0d2d80c0b336f0ee9318233f0d19',
+silly testEngine      tarball: 'http://registry.npmjs.org/jast/-/jast-0.2.0.tgz' } }
+verbose caching /Users/tim/.npm/jast/0.2.0/package/package.json
+verbose loadDefaults jast@0.2.0
+silly updated sha bytes 27646
+info shasum a742e190f56c0d2d80c0b336f0ee9318233f0d19
+info shasum /Users/tim/.npm/jast/0.2.0/package.tgz
+verbose from cache /Users/tim/.npm/jast/0.2.0/package/package.json
+verbose chmod /Users/tim/.npm/jast/0.2.0/package.tgz 644
+silly publish { name: 'jast',
+silly publish   description: 'A parser and tools for a JavaScript AST in JSON.',
+silly publish   version: '0.2.0',
+silly publish   author: { name: 'Tim Cameron Ryan', email: 'tim@timryan.org' },
+silly publish   contributors: [],
+silly publish   dependencies: {},
+silly publish   main: './lib/jast.js',
+silly publish   keywords: [ 'ast', 'javascript', 'parser', 'tools', 'walker' ],
+silly publish   repository: 
+silly publish    { type: 'git',
+silly publish      url: 'git://github.com/timcameronryan/jast.git' },
+silly publish   _npmJsonOpts: 
+silly publish    { file: '/Users/tim/.npm/jast/0.2.0/package/package.json',
+silly publish      wscript: false,
+silly publish      contributors: false,
+silly publish      serverjs: false },
+silly publish   _id: 'jast@0.2.0',
+silly publish   devDependencies: {},
+silly publish   engines: { node: '*' },
+silly publish   _engineSupported: true,
+silly publish   _npmVersion: '1.0.27',
+silly publish   _nodeVersion: 'v0.4.11',
+silly publish   _defaultsLoaded: true,
+silly publish   dist: 
+silly publish    { shasum: 'a742e190f56c0d2d80c0b336f0ee9318233f0d19',
+silly publish      tarball: 'http://registry.npmjs.org/jast/-/jast-0.2.0.tgz' } }
+verbose PUT jast
+verbose raw, before any munging jast
+verbose url resolving [ 'https://registry.npmjs.org/', './jast' ]
+verbose url resolved https://registry.npmjs.org/jast
+verbose url parsed { protocol: 'https:',
+verbose url parsed   slashes: true,
+verbose url parsed   host: 'registry.npmjs.org',
+verbose url parsed   hostname: 'registry.npmjs.org',
+verbose url parsed   href: 'https://registry.npmjs.org/jast',
+verbose url parsed   pathname: '/jast' }
+silly writing json { _id: 'jast',
+silly writing json   name: 'jast',
+silly writing json   description: 'A parser and tools for a JavaScript AST in JSON.',
+silly writing json   'dist-tags': {},
+silly writing json   versions: {},
+silly writing json   maintainers: [ { name: 'timcameronryan', email: 'tim@timryan.org' } ] }
+verbose response https://registry.npmjs.org/jast
+silly chunk {"error":"conflict","reason":"Document update conflict."}
+silly chunk 
+verbose GET jast
+verbose raw, before any munging jast
+verbose url resolving [ 'https://registry.npmjs.org/', './jast' ]
+verbose url resolved https://registry.npmjs.org/jast
+verbose url parsed { protocol: 'https:',
+verbose url parsed   slashes: true,
+verbose url parsed   host: 'registry.npmjs.org',
+verbose url parsed   hostname: 'registry.npmjs.org',
+verbose url parsed   href: 'https://registry.npmjs.org/jast',
+verbose url parsed   pathname: '/jast' }
+verbose response https://registry.npmjs.org/jast
+silly chunk {"_id":"jast","_rev":"15-7dbb1cfa2cb38e30fb77c0dfc2121402","name":"jast","description":"A parser and tools for a JavaScript AST in JSON.","dist-tags":{"latest":"0.2.0"},"versions":{"0.0.2":{"name":"jast","description":"A parser and tools for a JavaScript AST in JSON.","version":"0.0.2","main":"./lib/jast.js","keywords":["ast","javascript","parser","tools","walker"],"repository":{"type":"git","url":"git://github.com/timcameronryan/jast.git"},"_npmJsonOpts":{"file":"/Users/tim/.npm/jast/0.0.2/package/package.json","wscript":false,"contributors":false,"serverjs":false},"_id":"jast@0.0.2","dependencies":{},"devDependencies":{},"engines":{"node":"*"},"_engineSupported":true,"_npmVersion":"1.0.27","_nodeVersion":"v0.4.11","_defaultsLoaded":true,"dist":{"shasum":"97ca617bed7cf93c74725b91fdbe98a1bb3bd785","tarball":"http://registry.npmjs.org/jast/-/jast-0.0.2.tgz"},"maintainers":[{"name":"timcameronryan","email":"tim@timryan.org"}],"directories":{}},"0.0.3":{"name":"jast","description":"A parser and tools for a JavaScript AST in JSON.","version":"0.0.3","author":{"name":"Tim Cameron Ryan","email":"tim@timryan.org"},"contributors":[],"dependencies":{},"main":"./lib/jast.js","keywords":["ast","javascript","parser","tools","walker"],"repository":{"t
+silly chunk ype":"git","url":"git://github.com/timcameronryan/jast.git"},"_npmJsonOpts":{"file":"/Users/tim/.npm/jast/0.0.3/package/package.json","wscript":false,"contributors":false,"serverjs":false},"_id":"jast@0.0.3","devDependencies":{},"engines":{"node":"*"},"_engineSupported":true,"_npmVersion":"1.0.27","_nodeVersion":"v0.4.11","_defaultsLoaded":true,"dist":{"shasum":"9204682a05c0730a2cc181e2d859bf2036ae6a84","tarball":"http://registry.npmjs.org/jast/-/jast-0.0.3.tgz"},"maintainers":[{"name":"timcameronryan","email":"tim@timryan.org"}],"directories":{}},"0.0.4":{"name":"jast","description":"A parser and tools for a JavaScript AST in JSON.","version":"0.0.4","author":{"name":"Tim Cameron Ryan","email":"tim@timryan.org"},"contributors":[],"dependencies":{},"main":"./lib/jast.js","keywords":["ast","javascript","parser","tools","walker"],"repository":{"type":"git","url":"git://github.com/timcameronryan/jast.git"},"_npmJsonOpts":{"file":"/Users/tim/.npm/jast/0.0.4/package/package.json","wscript":false,"contributors":false,"serverjs":false},"_id":"jast@0.0.4","devDependencies":{},"engines":{"node":"*"},"_engineSupported":true,"_npmVersion":"1.0.27","_nodeVersion":"v0.4.11","_defaultsLoaded":true,"dist":{"shasum":"8cd726126c111d9c44c73d4db1cb2fd2bda38cf5","tarball":"http://registry.npmjs.org/jast/-/jast-0.0.4.tgz"},"maintainers":[{"name":"timcameronryan","email":"tim@timryan.org"}],"directories":{}},"0.1.0":{"name":"jast","description":"A parser and
+silly chunk  tools for a JavaScript AST in JSON.","version":"0.1.0","author":{"name":"Tim Cameron Ryan","email":"tim@timryan.org"},"contributors":[],"dependencies":{},"main":"./lib/jast.js","keywords":["ast","javascript","parser","tools","walker"],"repository":{"type":"git","url":"git://github.com/timcameronryan/jast.git"},"_npmJsonOpts":{"file":"/Users/tim/.npm/jast/0.1.0/package/package.json","wscript":false,"contributors":false,"serverjs":false},"_id":"jast@0.1.0","devDependencies":{},"engines":{"node":"*"},"_engineSupported":true,"_npmVersion":"1.0.27","_nodeVersion":"v0.4.11","_defaultsLoaded":true,"dist":{"shasum":"d34ff80a638993fa659876f1302392934f9f6022","tarball":"http://registry.npmjs.org/jast/-/jast-0.1.0.tgz"},"maintainers":[{"name":"timcameronryan","email":"tim@timryan.org"}],"directories":{}},"0.1.1":{"name":"jast","description":"A parser and tools for a JavaScript AST in JSON.","version":"0.1.1","author":{"name":"Tim Cameron Ryan","email":"tim@timryan.org"},"contributors":[],"dependencies":{},"main":"./lib/jast.js","keywords":["ast","javascript","parser","tools","walker"],"repository":{"type":"git","url":"git://github.com/timcameronryan/jast.git"},"_npmJsonOpts":{"file":"/Users/tim/.npm/jast/0.1.1/package/package.json","wscript":false,"contributors":false,"serverjs":false},"_id":"jast@0.1.1","devDependencies":{},"engines":{"node":"*"},"_engineSupported":true,"_npmVersion":"1.0.27","_nodeVersion":"v0.4.11","_defaultsLoaded":true,"dist
+silly chunk ":{"shasum":"5a44884c44b3747c128ed62fbb0b1e89da24e256","tarball":"http://registry.npmjs.org/jast/-/jast-0.1.1.tgz"},"maintainers":[{"name":"timcameronryan","email":"tim@timryan.org"}],"directories":{}},"0.1.2":{"name":"jast","description":"A parser and tools for a JavaScript AST in JSON.","version":"0.1.2","author":{"name":"Tim Cameron Ryan","email":"tim@timryan.org"},"contributors":[],"dependencies":{},"main":"./lib/jast.js","keywords":["ast","javascript","parser","tools","walker"],"repository":{"type":"git","url":"git://github.com/timcameronryan/jast.git"},"_npmJsonOpts":{"file":"/Users/tim/.npm/jast/0.1.2/package/package.json","wscript":false,"contributors":false,"serverjs":false},"_id":"jast@0.1.2","devDependencies":{},"engines":{"node":"*"},"_engineSupported":true,"_npmVersion":"1.0.27","_nodeVersion":"v0.4.11","_defaultsLoaded":true,"dist":{"shasum":"f12ac53c39536cba6f2b368032bde497b2740ea2","tarball":"http://registry.npmjs.org/jast/-/jast-0.1.2.tgz"},"maintainers":[{"name":"timcameronryan","email":"tim@timryan.org"}],"directories":{}},"0.2.0":{"name":"jast","description":"A parser and tools for a JavaScript AST in JSON.","version":"0.2.0","author":{"name":"Tim Cameron Ryan","email":"tim@timryan.org"},"contributors":[],"dependencies":{},"main":"./lib/jast.js","keywords":["ast","javascript","parser","tools","walker"],"repository":{"type":"git","url":"git://github.com/timcameronryan/jast.git"},"_npmJsonOpts":{"file":"/Users/tim/.npm/jast/0.2.0/package/package.json","wscript":false,"contributors":false,"serverjs":false},"_id":"jast@0.2.0","devDependencies":{},"engines":{"node":"*"},"_engineSupported":true,"_npmVersion":"1.0.27","_nodeVersion":"v0.4.11","_defaultsLoaded":true,"dist":{"shasum":"823309bc5712d177f33ab9113f0d35e9a48e9fff","tarball":"http://registry.npmjs.org/jast/-/jast-0.2.0.tgz"},"maintainers":[{"name":"timcameronryan","email":"tim@timryan.org"}],"directories":{}}},"maintainers":[{"name":"timcameronryan","email":"tim@timryan.org"}],"time":{"0.0.2":"2011-09-26T23:21:57.487Z","0.0.3":"2011-09-26T23:24:45.010Z","0.0.4":"2011-09-27T00:12:29.023Z","0.1.0":"2011-09-29T04:07:54.802Z","0.1.1":"2011-09-29T04:11:45.702Z","0.1.2":"2011-09-29T09:25:44.657Z","0.2.0":"2011-10-02T08:15:47.716Z"},"repository":{"type":"git","url":"git://github.com/timcameronryan/jast.git"},"author":{"name":"Tim Cameron Ryan","email":"tim@timryan.org"}}
+info Already published jast@0.2.0
+verbose uploading bin dists []
+ERR! publish fail Cannot publish over existing version.
+ERR! publish fail Bump the 'version' field, set the --force flag, or
+ERR! publish fail     npm unpublish 'jast@0.2.0'
+ERR! publish fail and try again
+ERR! 
+ERR! System Darwin 11.2.0
+ERR! command "node" "/usr/local/bin/npm" "publish"
+ERR! cwd /Volumes/Files/code/node/jast
+ERR! node -v v0.4.11
+ERR! npm -v 1.0.27
+verbose exit [ 1, true ]
